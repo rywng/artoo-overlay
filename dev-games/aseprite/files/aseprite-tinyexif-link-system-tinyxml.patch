@@ -1,0 +1,19 @@
+commit 8e7c573e5e6158698109388dade3d2afd725d849
+Author: Ryan <ryan@alien.gov>
+Date:   Wed Nov 27 17:41:33 2024 +0800
+
+    fix(build): Enable linking system tinyxml
+
+diff --git a/third_party/TinyEXIF/CMakeLists.txt b/third_party/TinyEXIF/CMakeLists.txt
+index 674dbd6..9ee1821 100644
+--- a/third_party/TinyEXIF/CMakeLists.txt
++++ b/third_party/TinyEXIF/CMakeLists.txt
+@@ -75,6 +75,8 @@ endif()
+ # to distinguish between debug and release lib
+ set(CMAKE_DEBUG_POSTFIX "d")
+ 
++find_package(tinyxml2)
++
+ if(BUILD_SHARED_LIBS)
+ 	add_library(TinyEXIF SHARED TinyEXIF.cpp TinyEXIF.h)
+ 

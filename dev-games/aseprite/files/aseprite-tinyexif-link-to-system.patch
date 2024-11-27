@@ -1,0 +1,13 @@
+diff --git a/third_party/tinyxml2/CMakeLists.txt b/third_party/tinyxml2/CMakeLists.txt
+index 7632022..6aad6f2 100644
+--- a/third_party/tinyxml2/CMakeLists.txt
++++ b/third_party/tinyxml2/CMakeLists.txt
+@@ -19,6 +19,8 @@ endif ()
+ set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+ set(CMAKE_VISIBILITY_INLINES_HIDDEN YES)
+ 
++find_package(tinyxml2)
++
+ add_library(tinyxml2 tinyxml2.cpp tinyxml2.h)
+ add_library(tinyxml2::tinyxml2 ALIAS tinyxml2)
+ 
